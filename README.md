@@ -8,6 +8,18 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Comprimento da Linha](#comprimento-da-linha)
 	- [Protocolos](#protocolos)
 - [html](#html)
+	- [Formatação](#indentação)
+	- [Doctype](#espaços-em-branco)
+	- [Codificação](#codificação)
+	- [Viewport](#viewport)
+	- [Previnir Modo de Compatiblidade do IE](#previnir-modo-de-compatibilidade-do-ie)
+	- [Atributos Type](#atributos-type)
+	- [Comentários](#comentários)
+	- [Itens de Ação](#itens-de-ação)
+	- [Títulos](#títulos)
+	- [Listas](#listas)
+	- [Formulários](#formulários)
+	- [Tabelas](#tabelas)
 - [css](#css)
 
 ## Regras Gerais
