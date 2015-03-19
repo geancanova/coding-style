@@ -8,8 +8,8 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Comprimento da Linha](#comprimento-da-linha)
 	- [Protocolos](#protocolos)
 - [html](#html)
-	- [Formatação](#indentação)
-	- [Doctype](#espaços-em-branco)
+	- [Formatação](#formatação)
+	- [Doctype](#doctype)
 	- [Codificação](#codificação)
 	- [Viewport](#viewport)
 	- [Previnir Modo de Compatiblidade do IE](#previnir-modo-de-compatibilidade-do-ie)
@@ -166,7 +166,7 @@ Utilize a metatag viewport padrão a seguir. Caso seja necessário, pode-se util
 Caso os valores padrão sejam alterados, lembre de alterá-los na regra `@viewport` no **CSS**.
 `<meta name="viewport" content="width=device-width, initial-scale=1">`
 
-### Previnir Modo de Compatiblidade do IE
+### Previnir Modo de Compatibilidade do IE
 Algumas vezes o navegador **IE** pode entrar indesejavelmente em **Modo de Compatibilidade**. Para prevenir este comportamento, utilizar a meta tag:
 
 `<meta http-equiv="x-ua-compatible" content="ie=edge">`
