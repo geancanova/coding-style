@@ -3,6 +3,10 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 
 - [Regras Gerais](#regras-gerais)
 	- [Indentação](#indentação)
+	- [Espaços em Branco](#espaços-em-branco)
+	- [Nomenclatura](#nomenclatura)
+	- [Comprimento da Linha](#comprimento-da-linha)
+	- [Protocolos](#protocolos)
 - [html](#html)
 - [css](#css)
 
