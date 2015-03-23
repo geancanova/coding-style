@@ -22,7 +22,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Tabelas](#tabelas)
 - [css](#css)
 	- [Regras Gerais](#regras-gerais)
-	- [Formatação](#formatação)
+	- [Formatação](#formatação-1)
 
 ## Regras Gerais
 ### Indentação
