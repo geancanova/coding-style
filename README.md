@@ -21,6 +21,8 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Formulários](#formulários)
 	- [Tabelas](#tabelas)
 - [css](#css)
+	- [Regras Gerais](#regras-gerais)
+	- [Formatação](#formatação)
 
 ## Regras Gerais
 ### Indentação
