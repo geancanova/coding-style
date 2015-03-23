@@ -23,6 +23,15 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 - [css](#css)
 	- [Regras Gerais](#regras-gerais)
 	- [Formatação](#formatação-1)
+	- [Ordenamento de Propriedades](#ordenamento-de-propriedades)
+	- [Preprocessadores (Less, Sass, ...)](#preprocessadores-less-sass-)
+	- [Seletores](#seletores)
+	- [IDs e Classes](#ids-e-classes)
+	- [Nomenclatura BEM (Bloco, Elemento, Modificador](#nomenclatura-bem-bloco-elemento-modificador)
+	- [Organização](#organização)
+	- [Comentários](#comentários)
+- [js](#js)
+	- [Variáveis](#regras-gerais)
 
 ## Regras Gerais
 ### Indentação
@@ -465,3 +474,107 @@ Utilizar comentários para separar seções.
 /* Footer */
 /******************************************************************************/
 ```
+
+## JS
+### Variáveis
+* Utilize a notação **CamelCase** iniciando por minúscula para nomes de variável. Ex.: `nomeDaVariavel`
+* Prefira `'`(aspas simples) a `"`(aspas duplas) na declaração de **strings**. Dessa maneira é mais simples manter strings com **html**:
+
+```javascript
+var msg = '<p class="message">This is some HTML</p>';
+```
+
+* Elementos **jQuery** devem possuir o prefixo `$`. Ex.: `var $el = $(this);`
+* Declare variáveis agrupadas no topo da função sempre que possível. Ex.:
+
+```javascript
+var currentEntry, // currently selected table entry
+	level,        // indentation level
+    size;         // size of table
+```
+
+* Use `{}` em vez de `new Object()`.
+* Use `[]` em vez de `new Array()`.
+
+### Comentários
+Escreva comentários significativos. Foque em explicações que não estejam explícitas no código.
+
+### Use espaços em branco
+Preze pela **legibilidade** do código. De acordo com os exemplos:
+
+```javascript
+if (condition) {
+    statements
+} else if (condition) {
+    statements
+} else {
+    statements
+}
+```
+
+```javascript
+function outer(c, d) {
+    var e = c * d;
+
+    function inner(a, b) {
+        return (e * a) + b;
+    }
+
+    return inner(0, 1);
+}
+```
+
+### preventDefault
+O comportamento padrão de um link, por exemplo, é direcionar o usuário ao recurso especificado no parâmetro `href`. Muitas vezes, no entanto, utilizamos **js** para modificar esse comportamento, abrindo um modal, expandindo uma seção etc. Para que a ação-padrão do evento não seja disparada, ou seja, para que o link apenas abra o modal e não direcione o usuário a outro recurso, é necessário chamar o método `preventDefault`, tanto em **JavaScript nativo** quanto no framework **jQuery**.
+
+É importante que essa seja a **primeira instrução**, pois do contrário, será impossível visualizar quaisquer erros que ocorram, já que o usuário será direcionado a outro recurso. Ao invés de:
+
+```javascript
+$('.selector').click(function (e) {
+    $('.foo').show();
+    $('.bar').hidden();
+    
+    e.preventDefault();
+});
+```
+escreva:
+```javascript
+$('.selector').click(function (e) {
+    e.preventDefault();
+
+    $('.foo').show();
+    $('.bar').hidden();
+});
+```
+
+### Outras recomendações
+* Código **javascript** não deve ser escrito diretamente no **html** exceto quando for um pequeno trecho de código válido apenas em uma sessão do projeto.
+* Tags devem ser inseridas **antes** do fechamento da tag `body`. Isso reduz o efeito de atraso no carregamento de outros recursos da página devido ao carregamento de `scripts`.
+* Comparações apenas com `===` e `!==`.
+Utilize `;` (ponto-e-vírgula) no final de toda declaração simples.
+
+## Ferramentas Úteis
+* [Google Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
+* [Extensão Chrome: Developer Checklist](https://chrome.google.com/webstore/detail/web-developer-checklist/iahamcpedabephpcgkeikbclmaljebjp)
+* [Editorconfig.org](http://editorconfig.org/)
+* [Can I Use](http://caniuse.com/)
+* [HTML5please](http://html5please.com/)
+
+## TODO
+* SUGESTÃO: Browserstack para testes
+* Testar atributos booleanos sem valor (IE8)
+* **rem** ou **px**?
+
+## Referências
+* https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml
+* http://isobar-idev.github.io/code-standards/
+* http://www.bbc.co.uk/guidelines/futuremedia/technical/semantic_markup.shtml
+* http://code.tutsplus.com/tutorials/30-css-best-practices-for-beginners--net-6741
+* https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS
+* http://cssguidelin.es/
+* http://extranet.dzestudio.com.br/article/show/id/62
+* https://github.com/ginatrapani/ThinkUp/wiki/Code-Style-Guide
+* https://litmus.com/blog/background-colors-html-email
+* http://pt.wikipedia.org/wiki/JavaScript
+* https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault
+* http://api.jquery.com/event.preventdefault/
