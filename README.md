@@ -31,7 +31,11 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Organização](#organização)
 	- [Comentários](#comentários)
 - [js](#js)
-	- [Variáveis](#regras-gerais)
+	- [Variáveis](#variáveis)
+	- [Comentários](#comentários-1)
+	- [Use Espaços em Branco](#use-espaços-em-branco)
+	- [PreventDefault](#preventdefault)
+	- [Outras Recomendações](#outras-recomendações)
 
 ## Regras Gerais
 ### Indentação
