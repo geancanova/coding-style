@@ -36,7 +36,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Use Espaços em Branco](#use-espaços-em-branco)
 	- [PreventDefault](#preventdefault)
 	- [Outras Recomendações](#outras-recomendações)
-- [Ferramentas Úteis](#ferramentas-úteis)
+- [Ferramentas Úteis](#ferramentas-%C3%9Ateis)
 - [TODO](#todo)
 - [Referências](#referências)
 
